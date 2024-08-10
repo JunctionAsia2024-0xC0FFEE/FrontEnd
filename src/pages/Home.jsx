@@ -7,7 +7,7 @@ import ArrowRight from "../assets/arrow_right.svg";
 import ChattingBubble from "../assets/chatting_bubble.svg";
 
 export default function Home() {
-	useBlocker(({ currentLocation, nextLocation }) => value !== "" && currentLocation.pathname !== nextLocation.pathname);
+	// useBlocker(({ currentLocation, nextLocation }) => currentLocation.pathname !== nextLocation.pathname);
 
 	return (
 		<main className="flex flex-col mx-5 mt-10 mb-28">

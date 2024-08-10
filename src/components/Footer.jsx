@@ -22,7 +22,7 @@ export default function Footer() {
 
 function Item({ icon, text, active, path }) {
 	return (
-		<Link className="flex flex-col items-center" to={`${path}`}>
+		<Link className="flex flex-col items-center" to={path}>
 			{icon}
 			<span className={`text-sm ${active ? "text-primary" : ""}`}>{text}</span>
 		</Link>

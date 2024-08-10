@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import arrowDown from "../assets/arrow_down.svg";
+import ArrowDown from "../assets/arrow_down.svg";
 
 export default function DatePicker({ selectedYear, setSelectedYear, selectedMonth, setSelectedMonth, selectedDay, setSelectedDay }) {
 	const [openDropdown, setOpenDropdown] = useState(null);
@@ -83,7 +83,7 @@ function Select({ options, selectedOption, setSelectedOption, showDropdown, setS
 					))}
 				</ul>
 			)}
-			<img src={arrowDown} alt="화살표 아이콘" className="w-4 h-4" />
+			<img src={ArrowDown} alt="화살표 아이콘" className="w-4 h-4" />
 		</div>
 	);
 }

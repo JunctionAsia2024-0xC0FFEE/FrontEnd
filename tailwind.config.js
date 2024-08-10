@@ -8,6 +8,7 @@ export default {
 				disabled: "#FFB08E",
 				box: "#F2F4F6",
 				text: "#25252C",
+				subtext: "#8D8D8D",
 			},
 		},
 	},

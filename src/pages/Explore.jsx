@@ -14,6 +14,8 @@ export default function Explore() {
 	const webcamRef = useRef();
 	const fileInputRef = useRef();
 	const [recognitionResult, setRecognitionResult] = useState(null);
+	const [loading, setLoading] = useState(false);
+	
 
 	useEffect(() => {
 		if (recognitionResult) {
@@ -39,9 +41,11 @@ export default function Explore() {
 				};
 
 				try {
+					setLoading(true)
 					const response = await axios.post("https://ja2024.ny64.kr/api/foods/recognize/", data, { headers });
 					console.log(response.data);
 					setRecognitionResult(response.data);
+					setLoading(false)
 				} catch (error) {
 					console.log(error);
 				}
@@ -64,9 +68,11 @@ export default function Explore() {
 		};
 
 		try {
+			setLoading(true)
 			const response = await axios.post("https://ja2024.ny64.kr/api/foods/recognize/", data, { headers });
 			console.log(response.data);
 			setRecognitionResult(response.data);
+			setLoading(false)
 		} catch (error) {
 			console.log(error);
 		}
@@ -74,6 +80,7 @@ export default function Explore() {
 
 	return (
 		<main className="w-full h-full">
+			{loading? <div className="absolute text-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">loading...</div>:<></>}
 			<input type="file" hidden ref={fileInputRef} />
 			<div className="top-0 left-0 w-full h-full overflow-hidden">
 				<Webcam
@@ -84,7 +91,7 @@ export default function Explore() {
 						facingMode: "environment",
 					}}
 					disablePictureInPicture={true}
-					className="absolute top-0 left-0 w-full h-full object-cover"
+					className={`absolute top-0 left-0 w-full h-full object-cover ${loading?'opacity-60':''}`}
 				/>
 			</div>
 			<div className="absolute bottom-0 mb-[15dvh] w-full">
@@ -109,7 +116,7 @@ export default function Explore() {
 					setRecognitionResult(null);
 				}}
 				direction="bottom"
-				className="mb-16 overflow-scroll h-fit flex-col rounded-t-[20px] px-5 pt-6 gap-5">
+				className="mb-6 overflow-scroll flex-col rounded-[20px] px-5 pb-10 pt-6 gap-5">
 				{recognitionResult ? (
 					<div className="h-fit">
 						<div className="flex gap-2">

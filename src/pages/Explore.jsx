@@ -39,7 +39,7 @@ export default function Explore() {
 				};
 
 				try {
-					const response = await axios.post("http://160.20.142.200:8000/api/foods/recognize/", data, { headers });
+					const response = await axios.post("https://ja2024.ny64.kr/api/foods/recognize/", data, { headers });
 					console.log(response.data);
 					setRecognitionResult(response.data);
 				} catch (error) {
@@ -64,7 +64,7 @@ export default function Explore() {
 		};
 
 		try {
-			const response = await axios.post("http://160.20.142.200:8000/api/foods/recognize/", data, { headers });
+			const response = await axios.post("https://ja2024.ny64.kr/api/foods/recognize/", data, { headers });
 			console.log(response.data);
 			setRecognitionResult(response.data);
 		} catch (error) {

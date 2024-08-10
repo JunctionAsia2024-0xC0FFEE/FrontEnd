@@ -11,9 +11,15 @@ import TempImg from "../assets/temp_img.png";
 export default function Explore() {
 	const [isOpen, setIsOpen] = useState(true);
 	const webcamRef = useRef();
+	const fileInputRef = useRef();
+
+	const handelGalleryOpen = () => {
+		fileInputRef.current.click();
+	};
 
 	return (
 		<main className="w-full h-full">
+			<input type="file" hidden ref={fileInputRef} />
 			<div className="top-0 left-0 w-full h-full overflow-hidden">
 				<Webcam
 					ref={webcamRef}
@@ -28,7 +34,9 @@ export default function Explore() {
 			</div>
 			<div className="absolute bottom-0 mb-[15dvh] w-full">
 				<div className="mx-11 flex justify-between items-center">
-					<div className="bg-white flex items-center justify-center p-3 rounded-xl h-fit shadow-2xl cursor-pointer transform active:scale-110 transition-transform">
+					<div
+						className="bg-white flex items-center justify-center p-3 rounded-xl h-fit shadow-2xl cursor-pointer transform active:scale-110 transition-transform"
+						onClick={handelGalleryOpen}>
 						<img src={Photo} alt="사진" />
 					</div>
 					<div className="bg-white flex items-center justify-center p-5 rounded-full shadow-2xl cursor-pointer transform active:scale-110 transition-transform">

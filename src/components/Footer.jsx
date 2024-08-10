@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer() {
 	const isIos = navigator.userAgent.includes("iPhone");
@@ -14,18 +14,18 @@ export default function Footer() {
 	return (
 		<footer className={`fixed z-10 bottom-0 left-0 w-full flex items-start pt-2 justify-around rounded-[20px] border-box border-t-2 bg-white ${isIos ? "h-20" : "h-16"}`}>
 			{items.map((item, index) => (
-				<Item key={index} icon={item.icon} text={item.text} active={location.pathname === item.path} />
+				<Item key={index} icon={item.icon} text={item.text} path={item.path} active={location.pathname === item.path} />
 			))}
 		</footer>
 	);
 }
 
-function Item({ icon, text, active }) {
+function Item({ icon, text, active, path }) {
 	return (
-		<div className="flex flex-col items-center">
+		<Link className="flex flex-col items-center" to={`${path}`}>
 			{icon}
 			<span className={`text-sm ${active ? "text-primary" : ""}`}>{text}</span>
-		</div>
+		</Link>
 	);
 }
 

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { invoke } from "@tauri-apps/api/core";
 
 export default function Footer() {
+	const isIos = navigator.userAgent.includes("iPhone");
 	const location = useLocation();
 
 	const items = [
@@ -11,7 +13,7 @@ export default function Footer() {
 	];
 
 	return (
-		<footer className="fixed z-10 bottom-0 left-0 w-full flex items-center h-16 justify-around rounded-[20px] border-box border-t-2 bg-white">
+		<footer className={`fixed z-10 bottom-0 left-0 w-full flex items-center h-16 justify-around rounded-[20px] border-box border-t-2 bg-white ${isIos ? "pb-4" : ""}`}>
 			{items.map((item, index) => (
 				<Item key={index} icon={item.icon} text={item.text} active={location.pathname === item.path} />
 			))}

@@ -19,7 +19,7 @@ export const info = {
 export default function QuestionCard({contentId, setContentId, setDetail}) {
     let content = info[contentId];
     
-    return <article onClick={() => {setContentId(contentId); setDetail(true)}} className="flex flex-col items-start px-4 py-3 gap-1 bg-box rounded-2xl">
+    return <article onClick={() => {setContentId(contentId); setDetail(true)}} className="flex flex-col items-start px-4 py-3 gap-1 bg-box rounded-2xl transition-all duration-700 active:scale-95">
         <section className="flex gap-1 items-end">
             <h1 className="font-semibold text-base">{content.title}</h1>
             <div className="text-subtext text-sm">{content.time}전</div>

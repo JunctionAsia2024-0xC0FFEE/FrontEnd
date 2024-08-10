@@ -19,7 +19,7 @@ import React from "react";
 export default function CommentCard() {
     // let content = info[commentId];
     
-    return <article className="flex flex-col items-start px-4 py-3 gap-1">
+    return <article className="flex flex-col items-start px-4 py-3 gap-1 transition-all duration-700 active:scale-95">
         <div className="flex flex-col gap-1">
             <p className="text-sm text-subtext">10분전</p>
             <p>대충 엄청난 답변글대충 엄청난 답변글대충 엄청난 답변글대충 엄청난 답변글대충 엄청난 답변글대충 엄청난 답변글</p>

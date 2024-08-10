@@ -39,7 +39,7 @@ export default function Explore() {
 					</div>
 				</div>
 			</div>
-			<Drawer open={isOpen} onClose={() => setIsOpen(false)} direction="bottom" className="flex flex-col rounded-t-[20px] px-5 pt-6 gap-5">
+			<Drawer open={isOpen} onClose={() => setIsOpen(false)} direction="bottom" className="mb-12 flex flex-col rounded-t-[20px] px-5 pt-6 gap-5">
 				<div className="flex gap-2">
 					<img src={TempImg} alt="임시 이미지" className="object-cover w-24 h-24" />
 					<div className="flex flex-col gap-2">
@@ -56,10 +56,12 @@ export default function Explore() {
 					</div>
 				</div>
 				<div className="text-lg">
-					<p>에ㅔㅔ에에에ㅔㅔ에에에에ㅔㅇ에ㅔ에ㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔ에에에에ㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔ아샷추사줘</p>
+					<p>
+						에ㅔㅔ에에에ㅔㅔ에에에에ㅔㅇ에ㅔaasdfasfsadㅁㄴㅇㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㄹㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ에ㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔ에에에에ㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔ아샷추사줘
+					</p>
 				</div>
 			</Drawer>
-			<Footer />
+			<Footer className="z-50" />
 		</main>
 	);
 }

@@ -12,7 +12,7 @@ export default function Footer() {
 	];
 
 	return (
-		<footer className={`fixed z-10 bottom-0 left-0 w-full flex items-start pt-2 justify-around rounded-t-[20px] border-box border-t-2 bg-white ${isIos ? "h-20" : "h-16"}`}>
+		<footer className={`fixed z-[999999999999] bottom-0 left-0 w-full flex items-start pt-2 justify-around rounded-t-[20px] border-box border-t-2 bg-white ${isIos ? "h-20" : "h-16"}`}>
 			{items.map((item, index) => (
 				<Item key={index} icon={item.icon} text={item.text} path={item.path} active={location.pathname === item.path} />
 			))}

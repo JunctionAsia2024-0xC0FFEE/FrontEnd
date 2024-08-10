@@ -2,7 +2,14 @@
 export default {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				primary: "#FF7B42",
+				disabled: "#FFB08E",
+				box: "#F2F4F6",
+				text: "#25252C",
+			},
+		},
 	},
 	plugins: [],
 };

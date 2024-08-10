@@ -67,10 +67,8 @@ export default function DatePicker({ selectedYear, setSelectedYear, selectedMont
 
 function Select({ options, selectedOption, setSelectedOption, showDropdown, setShowDropdown }) {
 	return (
-		<div className="justify-start items-center flex relative bg-box rounded-md p-2 gap-1">
-			<button className="text-sm font-semibold" onClick={setShowDropdown}>
-				{selectedOption ? selectedOption.label : "선택"}
-			</button>
+		<div className="justify-start items-center flex relative bg-box rounded-md p-2 gap-1" onClick={setShowDropdown}>
+			<button className="text-sm font-semibold">{selectedOption ? selectedOption.label : "선택"}</button>
 			{showDropdown && (
 				<ul className="absolute left-0 top-0 z-10 mt-10 py-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-[25vh] overflow-y-scroll">
 					{options.map((option) => (

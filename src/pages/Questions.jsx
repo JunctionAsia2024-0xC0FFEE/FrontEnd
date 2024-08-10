@@ -18,18 +18,10 @@ export default function Questions() {
 
 const Q = ({ setContentId, setDetail }) => {
     return <div className="flex flex-col gap-4 w-full">
-        <h1 className="text-2xl font-bold">질문답변</h1>
+        <h1 className="text-2xl font-bold mt-10">QnA</h1>
         <div className="flex flex-col gap-3">
+            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
             <QuestionCard contentId="2" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
         </div>
     </div>
 
@@ -40,16 +32,18 @@ const A = ({ contentId, detail, setDetail }) => {
 
     let content = info[contentId];
     return <div className={`overflow-visible fixed top-0 left-0 w-dvw h-dvh p-5 flex-col gap-4 bg-white transition-all duration-700 ${detail ? 'translate-x-0' : 'translate-x-full'}`}>
-        <p className="text-subtext" onClick={() => setDetail(false)}>{"< "}뒤로가기</p>
+        <p className="text-subtext" onClick={() => setDetail(false)}>{"< "}back</p>
         <div className="flex flex-col gap-4">
             <div className="flex justify-between items-end">
                 <h1 className="text-xl font-bold">{content.title}</h1>
-                <p className="text-sm text-subtext">{content.time}전</p>
+                <p className="text-sm text-subtext">{content.time}{" "}ago</p>
             </div>
             <h2>{content.description}</h2>
         </div>
         <div className="w-dvw translate-x-[-20px] h-3 bg-box my-14"></div>
-        <CommentCard/>
+        <CommentCard commentId="1"/>
+        <CommentCard commentId="2"/>
+        <CommentCard commentId="3"/>
     </div>
 
 }

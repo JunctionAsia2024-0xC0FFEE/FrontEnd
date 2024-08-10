@@ -109,7 +109,7 @@ export default function Explore() {
 					setRecognitionResult(null);
 				}}
 				direction="bottom"
-				className="mb-12 flex flex-col rounded-t-[20px] px-5 pt-6 gap-5">
+				className="mb-16 overflow-scroll h-fit flex-col rounded-t-[20px] px-5 pt-6 gap-5">
 				{recognitionResult ? (
 					<div className="h-fit">
 						<div className="flex gap-2">

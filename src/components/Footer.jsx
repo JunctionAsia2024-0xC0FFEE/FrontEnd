@@ -6,9 +6,9 @@ export default function Footer() {
 	const location = useLocation();
 
 	const items = [
-		{ path: "/explore", icon: <Compass active={location.pathname === "/explore"} />, text: "탐색" },
-		{ path: "/home", icon: <Home active={location.pathname === "/home"} />, text: "홈" },
-		{ path: "/questions", icon: <Question active={location.pathname === "/questions"} />, text: "질문" },
+		{ path: "/explore", icon: <Compass active={location.pathname === "/explore"} />, text: "Explore" },
+		{ path: "/home", icon: <Home active={location.pathname === "/home"} />, text: "Home" },
+		{ path: "/questions", icon: <Question active={location.pathname === "/questions"} />, text: "QnA" },
 	];
 
 	return (

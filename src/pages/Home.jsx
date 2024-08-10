@@ -5,6 +5,7 @@ import Card from "../components/Card";
 import Kid from "../assets/kid.svg";
 import ArrowRight from "../assets/arrow_right.svg";
 import ChattingBubble from "../assets/chatting_bubble.svg";
+import QuestionCard from "../components/QuestionCard";
 
 export default function Home() {
 	// useBlocker(({ currentLocation, nextLocation }) => currentLocation.pathname !== nextLocation.pathname);
@@ -17,14 +18,14 @@ export default function Home() {
 						<div className="flex gap-2 items-center w-full">
 							<img src={Kid} alt="아이 이모지" />
 							<div className="flex flex-col">
-								<span className="text-xs text-subtext">출산까지</span>
+								<span className="text-xs text-subtext">Give birth</span>
 								<span className="text-primary font-bold">D - 130</span>
 							</div>
 						</div>
 						<img src={ArrowRight} alt="오른쪽 화살표" />
 					</div>
 					<div className="flex items-center gap-2">
-						<span className="text-xs text-subtext">아이 이름</span>
+						{/* <span className="text-xs text-subtext">아이 이름</span> */}
 						<div className="relative flex-grow h-2 bg-gray-200 rounded">
 							<div className="absolute top-0 left-0 h-full bg-primary rounded" style={{ width: "50%" }}></div>
 						</div>
@@ -34,51 +35,13 @@ export default function Home() {
 
 				<div className="flex flex-col gap-4">
 					<div className="flex justify-between">
-						<span className="text-xl font-semibold">질문답변</span>
-						<span className="text-subtext">더보기</span>
+						<span className="text-xl font-semibold">QnA</span>
+						<span className="text-subtext">more</span>
 					</div>
 
 					<div className="flex flex-col gap-3">
-						<Card>
-							<span className="font-semibold">아이 달래기</span>
-							<div className="flex justify-between w-full text-sm">
-								<span className="text-subtext">대충 물어보는글</span>
-								<div className="flex gap-1">
-									<img src={ChattingBubble} alt="채팅 버블 이모지" />
-									<span>100</span>
-								</div>
-							</div>
-						</Card>
-						<Card>
-							<span className="font-semibold">아이 달래기</span>
-							<div className="flex justify-between w-full text-sm">
-								<span className="text-subtext">대충 물어보는글</span>
-								<div className="flex gap-1">
-									<img src={ChattingBubble} alt="채팅 버블 이모지" />
-									<span>100</span>
-								</div>
-							</div>
-						</Card>
-						<Card>
-							<span className="font-semibold">아이 달래기</span>
-							<div className="flex justify-between w-full text-sm">
-								<span className="text-subtext">대충 물어보는글</span>
-								<div className="flex gap-1">
-									<img src={ChattingBubble} alt="채팅 버블 이모지" />
-									<span>100</span>
-								</div>
-							</div>
-						</Card>
-						<Card>
-							<span className="font-semibold">아이 달래기</span>
-							<div className="flex justify-between w-full text-sm">
-								<span className="text-subtext">대충 물어보는글</span>
-								<div className="flex gap-1">
-									<img src={ChattingBubble} alt="채팅 버블 이모지" />
-									<span>100</span>
-								</div>
-							</div>
-						</Card>
+						<QuestionCard contentId="1"/>
+						<QuestionCard contentId="1"/>
 					</div>
 				</div>
 

@@ -36,7 +36,7 @@ const Q = ({ setContentId, setDetail }) => {
 }
 const A = ({ contentId, detail, setDetail }) => {
     if (!contentId)
-        return <div className={`overflow-visible fixed top-0 left-0 w-dvw h-dvh p-5 flex-col gap-4 bg-white transition-all`}></div>
+        return <div className={`overflow-visible fixed top-0 left-0 w-dvw h-dvh p-5 flex-col gap-4 bg-white transition-all duration-700 ${detail ? 'translate-x-0' : 'translate-x-full'}`}></div>
 
     let content = info[contentId];
     return <div className={`overflow-visible fixed top-0 left-0 w-dvw h-dvh p-5 flex-col gap-4 bg-white transition-all duration-700 ${detail ? 'translate-x-0' : 'translate-x-full'}`}>
@@ -49,10 +49,6 @@ const A = ({ contentId, detail, setDetail }) => {
             <h2>{content.description}</h2>
         </div>
         <div className="w-dvw translate-x-[-20px] h-3 bg-box my-14"></div>
-        <CommentCard/>
-        <CommentCard/>
-        <CommentCard/>
-        <CommentCard/>
         <CommentCard/>
     </div>
 

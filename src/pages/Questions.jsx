@@ -37,14 +37,6 @@ const Q = ({ setContentId, setDetail }) => {
         <div className="flex flex-col gap-3">
             <QuestionCard contentId="2" setDetail={setDetail} setContentId={setContentId} />
             <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
-            <QuestionCard contentId="1" setDetail={setDetail} setContentId={setContentId} />
         </div>
     </div>
 

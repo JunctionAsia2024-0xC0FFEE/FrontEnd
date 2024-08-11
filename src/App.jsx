@@ -34,7 +34,7 @@ export default function App() {
 					setSelectedDay={setSelectedDay}
 				/>
 				<Button className="w-full" onClick={() => navigate("/home")} disabled={!selectedYear || !selectedMonth || !selectedDay}>
-					계속하기
+					Next
 				</Button>
 			</div>
 		</main>

@@ -7,6 +7,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Questions from "./pages/Questions";
+import StyleSelector from "./pages/StyleSelector";
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 	{
 		path: "/questions",
 		element: <Questions />,
+	},
+	{
+		path: "/styleselector",
+		element: <StyleSelector />,
 	},
 ]);
 

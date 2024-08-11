@@ -10,17 +10,17 @@ export default function DatePicker({ selectedYear, setSelectedYear, selectedMont
 
 	const years = Array.from({ length: 2 }, (_, i) => ({
 		value: currentYear + i,
-		label: `${currentYear + i}년`,
+		label: `${currentYear + i}Y`,
 	}));
 
 	const months = Array.from({ length: 12 }, (_, i) => ({
 		value: i + 1,
-		label: `${i + 1}월`,
+		label: `${i + 1}M`,
 	})).filter((month) => selectedYear > currentYear || month.value >= currentMonth);
 
 	const days = Array.from({ length: 31 }, (_, i) => ({
 		value: i + 1,
-		label: `${i + 1}일`,
+		label: `${i + 1}D`,
 	})).filter((day) => selectedYear > currentYear || selectedMonth > currentMonth || day.value >= currentDay);
 
 	const handleYearChange = (year) => {
@@ -68,7 +68,7 @@ export default function DatePicker({ selectedYear, setSelectedYear, selectedMont
 function Select({ options, selectedOption, setSelectedOption, showDropdown, setShowDropdown }) {
 	return (
 		<div className="justify-start items-center flex relative bg-box rounded-md p-2 gap-1" onClick={setShowDropdown}>
-			<button className="text-sm font-semibold">{selectedOption ? selectedOption.label : "선택"}</button>
+			<button className="text-sm font-semibold">{selectedOption ? selectedOption.label : "select"}</button>
 			{showDropdown && (
 				<ul className="absolute left-0 top-0 z-10 mt-10 py-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-[25vh] overflow-y-scroll">
 					{options.map((option) => (

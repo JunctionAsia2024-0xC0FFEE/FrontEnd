@@ -22,7 +22,7 @@ export default function Home() {
 								<span className="text-primary font-bold">D - 130</span>
 							</div>
 						</div>
-						<ArrowRight/>
+						<ArrowRight />
 						{/* <img src={} alt="->" /> */}
 					</div>
 					<div className="flex items-center gap-2">
@@ -37,12 +37,12 @@ export default function Home() {
 				<div className="flex flex-col gap-4">
 					<div className="flex justify-between">
 						<span className="text-xl font-semibold">QnA</span>
-						<span className="flex text-subtext items-center" onClick={() => {navigate("/questions")}}>more <ArrowRight size={16}/> </span>
+						<span className="flex text-subtext items-center" onClick={() => { navigate("/questions") }}>more <ArrowRight size={16} /> </span>
 					</div>
 
 					<div className="flex flex-col gap-3">
-					<QuestionCard contentId="1" setDetail={null} setContentId={null} />
-					<QuestionCard contentId="2" setDetail={null} setContentId={null} />
+						<QuestionCard contentId="1" setDetail={null} setContentId={null} />
+						<QuestionCard contentId="2" setDetail={null} setContentId={null} />
 
 					</div>
 				</div>
@@ -54,31 +54,35 @@ export default function Home() {
 						<Card className="min-w-36">
 							<span>아침</span>
 							<ul>
-								<li>김치찌개</li>
-								<li>김치전</li>
-								<li>김치국</li>
-								<li>김치무침</li>
-								<li>김치절임</li>
+								<li>참치김치볶음밥</li>
+								<li>유부된장국</li>
+								<li>꼬들단무지</li>
+								<li>국물떡볶이</li>
+								<li>모듬튀김</li>
+								<li>쥬시쿨</li>
 							</ul>
 						</Card>
 						<Card className="min-w-36">
 							<span>점심</span>
 							<ul>
-								<li>김치찌개</li>
-								<li>김치전</li>
-								<li>김치국</li>
-								<li>김치무침</li>
-								<li>김치절임</li>
+
+								<li>발아현미밥</li>
+								<li>가쓰오장국</li>
+								<li>목살큐브스테이크</li>
+								<li>오지치즈후라이</li>
+								<li>배추김치</li>
+								<li>골드키위</li>
 							</ul>
 						</Card>
 						<Card className="min-w-36">
 							<span>저녁</span>
 							<ul>
-								<li>김치찌개</li>
-								<li>김치전</li>
-								<li>김치국</li>
-								<li>김치무침</li>
-								<li>김치절임</li>
+								<li>푸팟퐁커리</li>
+								<li>콩나물국</li>
+								<li>생선까스/타르타르소스</li>
+								<li>깍두기</li>
+								<li>푸딩</li>
+								<li>망고후르츠샐러드</li>
 							</ul>
 						</Card>
 					</div>

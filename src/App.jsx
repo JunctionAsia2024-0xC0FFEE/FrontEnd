@@ -22,7 +22,7 @@ export default function App() {
 		<main className="flex justify-center items-center h-dvh w-dvw">
 			<div className="flex justify-center flex-col items-center gap-12 w-full mx-14">
 				<div className="flex justify-centwer flex-col items-center gap-8">
-					<span className="text-2xl font-semibold">출산 예정일이 언제인가요?</span>
+					<span className="text-2xl font-semibold">When is your due date?</span>
 					<img src={PregnantWoman} alt="임신한 여자 이모지" width={178} height={178} />
 				</div>
 				<DatePicker

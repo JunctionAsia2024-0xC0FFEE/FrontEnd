@@ -22,7 +22,7 @@ export default function QuestionCard({contentId, setContentId, setDetail}) {
     return <article onClick={() => {setContentId(contentId); setDetail(true)}} className="flex flex-col items-start px-4 py-3 gap-1 bg-box rounded-2xl">
         <section className="flex gap-1 items-end">
             <h1 className="font-semibold text-base">{content.title}</h1>
-            <div className="text-subtext text-sm">{content.time}ago</div>
+            <div className="text-subtext text-sm text-nowrap">{content.time}ago</div>
         </section>
         <section className="flex justify-between gap-2 items-end w-full">
             <p className="text-subtext text-sm ">

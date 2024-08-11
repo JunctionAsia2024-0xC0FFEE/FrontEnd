@@ -21,7 +21,7 @@ export default function CommentCard() {
     
     return <article className="flex flex-col items-start px-4 py-3 gap-1">
         <div className="flex flex-col gap-1">
-            <p className="text-sm text-subtext">10min ago</p>
+            <p className="text-sm text-subtext text-nowrap">10min ago</p>
             <p>During pregnancy, it's important to eat a balanced diet that includes fresh fruits and vegetables, whole grains, and foods rich in protein. Be sure to consume green vegetables like spinach and broccoli, which are high in folic acid, and choose fish that are low in mercury. Nuts or yogurt make great snacks.</p>
         </div>
     </article>
